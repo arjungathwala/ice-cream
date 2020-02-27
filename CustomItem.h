@@ -1,6 +1,9 @@
 #ifndef CUSTOMITEM_H
 #define CUSTOMITEM_H
 
+#include <utility>
+#include <iomanip>
+#include <sstream>
 #include<string>
 #include<vector>
 #include<map>
@@ -18,6 +21,10 @@ public:
 
     std::string composeItem()
     {
+      std::stringstream ss;
+      ss<<std::fixed<<std::setprecision(2)<<getPrice();
+      std::string s;
+
       std::string custstr;
       std::vector<std::string>::iterator it = _toppings.begin();
       custstr = "Custom Size: "+CustomItem::size+"\n";
@@ -27,9 +34,9 @@ public:
         it++;
       }
       custstr += "\n";
-      custstr += "Price: "+std::to_string(getPrice())+"\n";
-      custstr += "--------------------\n";
-      custstr += "Total: "+std::to_string(getPrice())+"\n";
+      custstr += "Price: "+s+"\n";
+      custstr += "-----\n";
+      custstr += "Total: "+s+"\n";
       return custstr;
     }
 

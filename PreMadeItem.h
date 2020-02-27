@@ -1,6 +1,9 @@
 #ifndef PREMADEITEM_H
 #define PREMADEITEM_H
 
+#include <utility>
+#include <iomanip>
+#include <sstream>
 #include <vector>
 #include "IceCreamItem.h"
 #include <iostream>  
@@ -17,15 +20,15 @@ public:
     std::string composeItem()
     {
       std::stringstream ss;
-      ss<<getPrice();
+      ss<<std::fixed<<std::setprecision(2)<<getPrice();
       std::string s;
       ss>>s;
       std::string prestr;
       prestr = "Pre-made Size: "+PreMadeItem::size+"\n";
       prestr += "Pre-made Item: "+PreMadeItem::name+"\n";
-      prestr += "Price: $" + s;
+      prestr += "Price: $" + s+"\n";
       prestr += "-----\n";
-      prestr += "Total: $" + s;
+      prestr += "Total: $" + s+"\n";
       return prestr;
     }
 
