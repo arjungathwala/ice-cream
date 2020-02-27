@@ -13,3 +13,5 @@ private:
 std::string size;
 std::string name;
 };
+
+#endif
