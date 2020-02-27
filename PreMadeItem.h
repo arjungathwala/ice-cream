@@ -14,12 +14,16 @@ public:
 
     std::string composeItem()
     {
+      stringstream ss;
+      ss<<getPrice();
+      std::string s;
+      ss>>s;
       std::string prestr;
       prestr = "Pre-made Size: "+PreMadeItem::size+"\n";
       prestr += "Pre-made Item: "+PreMadeItem::name+"\n";
-      prestr += "Price: $"+std::to_string(getPrice())+"\n";
-      prestr += "--------------------\n";
-      prestr += "Total: $"+std::to_string(getPrice())+"\n";
+      prestr += "Price: $"+s+"\n";
+      prestr += "-----\n";
+      prestr += "Total: $"+s+"\n";
       return prestr;
     }
 
