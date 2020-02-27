@@ -11,7 +11,7 @@ PreMadeItem(std::string name, std::string size);
 virtual ~PreMadeItem();
 private:
 std::string size;
-std::string name;
+std::string topping;
 };
 
 #endif

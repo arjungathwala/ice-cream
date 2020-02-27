@@ -12,6 +12,7 @@ using namespace std;
 
 PreMadeItem::PreMadeItem(std::string name, std::string size):IceCreamItem(size) {
 this->size = size;
+this->topping = name;
 if (size == "small") {
 price = 4.00;
 } else if (size == "medium") {
