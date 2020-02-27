@@ -22,9 +22,9 @@ public:
     std::string composeItem()
     {
       std::stringstream ss;
-      ss<<std::fixed<<std::setprecision(2)<<getPrice();
+      ss<<std::fixed<<std::setprecision(3)<<getPrice();
       std::string s;
-
+      ss>>s;
       std::string custstr;
       std::vector<std::string>::iterator it = _toppings.begin();
       custstr = "Custom Size: "+CustomItem::size+"\n";
