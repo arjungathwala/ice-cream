@@ -1,28 +1,14 @@
-#include "PreMadeItem.h"
-#include "IceCreamItem.h"
+#include<iostream>
+#include"PreMadeItem.h"
 
-#include <utility>
-#include <iomanip>
-#include <sstream>
-#include <string>
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-PreMadeItem::PreMadeItem(std::string name, std::string size):IceCreamItem(size) {
-this->size = size;
-this->topping = name;
-if (size == "small") {
-price = 4.00;
-} else if (size == "medium") {
-price = 6.00;
-} else if (size == "large") {
-price = 7.50;
-} else {
-cout << "Invalid Size" << endl;
-exit (-1);
+PreMadeItem::PreMadeItem(std::string name, std::string size):IceCreamItem(size)
+{
+this->name = name;
+if(size == "small"){
+    IceCreamItem::price = 4.00;
+}else if(size == "medium"){
+    IceCreamItem::price = 6.00;
+}else if(size == "large"){
+    IceCreamItem::price = 7.50;
 }
 }
-
-PreMadeItem::~PreMadeItem() {};
