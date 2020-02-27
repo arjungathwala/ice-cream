@@ -17,9 +17,9 @@ public:
       std::string prestr;
       prestr = "Pre-made Size: "+PreMadeItem::size+"\n";
       prestr += "Pre-made Item: "+PreMadeItem::name+"\n";
-      prestr += "Price: "+std::to_string(getPrice())+"\n";
+      prestr += "Price: $"+std::to_string(getPrice())+"\n";
       prestr += "--------------------\n";
-      prestr += "Total: "+std::to_string(getPrice())+"\n";
+      prestr += "Total: $"+std::to_string(getPrice())+"\n";
       return prestr;
     }
 
